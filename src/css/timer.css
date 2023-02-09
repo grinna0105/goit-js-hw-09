@@ -1,0 +1,63 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+p {
+    display: flex;
+    align-self: flex-start;
+}
+
+input {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-size: 35;
+    padding: 15 15;
+    margin-top: 35px;
+    text-align: center;
+}
+
+button {
+    margin-top: 15px;
+    padding: 5 10;
+    background-color: rgb(246, 255, 255);
+    border-color: #e7e7e7;
+    font-size: 24;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: rgb(202, 234, 247);
+    border-color: rgb(141, 141, 141);
+}
+
+button:disabled {
+    background-color: rgb(246, 255, 255);
+    border-color: #e7e7e7;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 45px;
+    font-weight: 500;
+    font-size: 24;
+
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.field .value {
+    font-size: 45;
+}
