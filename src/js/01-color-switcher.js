@@ -10,13 +10,18 @@ stopBtn.addEventListener("click", onClickStopButton);
 
 function onClickStartButton () {
     timerId = setInterval(changeColor, 1000);
-    stopBtn.removeAttribute('disabled');
-    startBtn.setAttribute('disabled', true);
+    onBlockStartBtn();
+    
      
     function changeColor() {
         const color = getRandomHexColor();
         bodyEl.style.backgroundColor = color;
         console.log(color);
+    }
+
+    function onBlockStartBtn() {
+        stopBtn.removeAttribute('disabled');
+        startBtn.setAttribute('disabled', true);
     }
 };
 
@@ -26,6 +31,11 @@ function getRandomHexColor() {
 
 function onClickStopButton() {
     clearInterval(timerId);
-    stopBtn.setAttribute('disabled', true);
-    startBtn.removeAttribute('disabled');
+    onBlockStopBtn();
+
+    function onBlockStopBtn() {
+        stopBtn.setAttribute('disabled', true);
+        startBtn.removeAttribute('disabled');
+    }
 };
+
